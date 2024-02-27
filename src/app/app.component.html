@@ -1,2 +1,26 @@
-<router-outlet/>
-<app-josh-home> </app-josh-home>
+<!-- search-page.component.html -->
+
+<mat-form-field>
+  <input type="text" placeholder="Search" matInput [matAutocomplete]="auto">
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let user of filteredUsers" [value]="user.name">
+      {{ user.name }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+
+<div *ngFor="let user of filteredUsers">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>{{ user.name }}</mat-card-title>
+      <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ user.address }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="editUser(user)">Edit</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
