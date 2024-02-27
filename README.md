@@ -2,6 +2,41 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
+## The Task
+
+The task is to create a basic search application with 3 seperate routes.
+
+### The defaullt route
+
+The default route is a search page with an auto complete search bar. when the user performs a search the response should render in a card format with details about the user listed.
+
+The card should render:
+
+Name, Address, Email Address, and have a button for editting a user.
+
+There should be a button for adding a new user.
+
+### The add user route
+
+The add user route should be a form for creating new users.
+
+It should validate Email address and prevent duplicate users based on email address.
+
+### The edit user route
+
+The edit user route should work similar to the add route, but should only update existing users.
+
+Email should be readonly, but everything else should be modifiable.
+
+There should be a button to delete the user
+
+### Extras
+
+Try to use the angular cli as much as possible to create boiler plate files
+Feel free to use component libraries like angular material, bootstrap, primeng etc.
+
+can you use any ng add schematics when importing the libraries?
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -21,6 +56,12 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Running component tests
+
+Run `npm run cy:open` to open the cypress test tool and start writing component tests!
+
+To run all tests run `npm run cy:run`.
 
 ## Further help
 
